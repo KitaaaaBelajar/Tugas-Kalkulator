@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator</title>
+	
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!-- Font dan rel digunakan untuk menyambungkan pada nama css-->
+	<link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet"> 
+
+	<!-- Script -->
+	<script src="script.js"></script>
+</head>
+
+<body>
+	<div class="bg"></div>
+		<div class="main">
+			<!--Cara Menampilkan Judul-->
+			<h2>Calculator</h2>
+			<form name="form">
+				<input class="textarea" name="textarea">
+			</form>
+				<table>
+					<tr>
+						<!--Cara menghapus keseluruhan angka-->
+						<td><input class="button" type="button" value="C" onclick="clean()"></td>
+						<!--Cara menghapus satuan angka-->
+						<td><input class="button" type="button" value="<" onclick="back()"></td>
+						<!--Cara membagikan angka-->
+						<td><input class="button btn-green" type="button" value="/" onclick="insert(' / ')"></td>
+						<!--Cara mengkalikan angka-->
+						<td><input class="button btn-green" type="button" value="x" onclick="insert(' * ')"></td>
+					</tr>
+					<tr>
+						<!--Cara menampilkan angka 7-->
+						<td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+						<!--Cara menampilkan angka 8-->
+						<td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+						<!--Cara menampilkan angka 9-->
+						<td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+                        <!--Cara menampilkan kurang (-)-->
+						<td><input class="button btn-green" type="button" value="-" onclick="insert(' - ')"></td>
+					</tr>
+					<tr>
+						<!--Cara menampilkan angka 4-->
+						<td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+						<!--Cara menampilkan angka 5-->
+						<td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+						<!--Cara menampilkan angka 6-->
+						<td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+                        <!--Cara menampilkan tambah (+)-->
+						<td><input class="button btn-green" type="button" value="+" onclick="insert(' + ')"></td>
+					</tr>
+					<tr>
+						<!--Cara menampilkan angka 1-->
+						<td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+						<!--Cara menampilkan angka 2-->
+						<td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+						<!--Cara menampilkan angka 3-->
+						<td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+						<!--Cara menampilkan sama dengan-->
+						<td rowspan=2><input style="height:106px;" class="button btn-green" type="button" value="=" onclick="equal()"></td>
+					</tr>
+					<tr>
+						<!--Cara menampilkan angka 0 yang berjumlah 1-->
+						<td><input class="button btn-green" class="button" type="button" value="0" onclick="insert(0)"></td>
+						<!--Cara menampilkan angka 00 yang berjumlah 2-->
+						<td colspan=2><input style="width: 106px;" class="button btn-green"  type="button" value="00" onclick="insert('00')"></td>
+					</tr>
+				</table>
+			
+		</div>
+	</div>
+	
+</body>
+</html>
